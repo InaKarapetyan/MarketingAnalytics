@@ -1,0 +1,33 @@
+---
+title: "Marketing Hw1"
+output: pdf_document
+date: "2024-02-23"
+---
+
+# Before starting the homework itself let's install the necesary packages
+
+```{r cars}
+libs<-c('ggplot2','ggpubr','knitr','diffusion')
+load_libraries<-function(libs){
+  new_libs <- libs[!(libs %in% installed.packages()[,"Package"])] 
+  if(length(new_libs)>0) {install.packages(new_libs)}
+  lapply(libs, library, character.only = TRUE)
+}
+load_libraries(libs)
+```
+
+## Every year, Time magazine publishes a list of the best 100 innovations of that year.  Go to the list, choose an innovation, and put the link of the selected product. I selected a product, which is a "A Longer-lasting Laptop" Framework Laptop 16. It is a new laptop that can be continually modified by swapping out its parts, which will let users upgrade the CPU and graphics—and keep older machines out of landfills. Thinking about look-alike innovation from the past I decided to take simple laptops which at that time where the boom in the market and changed a lot of things in humans' lives. For this reason, I found a data related to revenue of the laptops industry worldwide from 2019-2028, but I will use just the subset of it and make predictions based on that. I guess the innovation of the laptop was world-changing and year after year even more interesting and inovative sort of it is produced and introduced to the market. 
+
+
+```{r}
+library(readxl)
+excel_file <- "path/to/your/excel/file.xlsx"
+
+# Read the Excel file
+data <- read_excel(excel_file, col_names = FALSE)
+
+# Print the data
+print(data)
+
+```
+
